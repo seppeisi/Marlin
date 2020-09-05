@@ -27,16 +27,16 @@
  * Choose your version:
  */
 // normal size or plus?
-//#define ANYCUBIC_KOSSEL_PLUS
+#define ANYCUBIC_KOSSEL_PLUS
 
 // Anycubic Probe version 1 or 2 see README.md; 0 for no probe
-#define ANYCUBIC_PROBE_VERSION 0
+#define ANYCUBIC_PROBE_VERSION 2
 
 // Heated Bed:
 // 0 ... no heated bed
 // 1 ... aluminium heated bed with "BuildTak-like" sticker
 // 2 ... ultrabase heated bed
-#define ANYCUBIC_KOSSEL_ENABLE_BED 0
+#define ANYCUBIC_KOSSEL_ENABLE_BED 2
 
 /**
  * Configuration.h
@@ -88,7 +88,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "@brandstaetter, @grbd" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Josef Eisgruber" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -121,7 +121,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 0
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -145,11 +145,11 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_TRIGORILLA_14
+  #define MOTHERBOARD BOARD_BTT_SKR_V1_3
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "ANYCUBIC Kossel"
+#define CUSTOM_MACHINE_NAME "ANYCUBIC Kossel Linear Plus"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -700,7 +700,7 @@
     // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
     #define DELTA_PRINTABLE_RADIUS 116.0  // (mm)
     // Center-to-center distance of the holes in the diagonal push rods.
-    #define DELTA_DIAGONAL_ROD 267        // (mm)
+    #define DELTA_DIAGONAL_ROD 267        // (mm) 267.5???
       // Horizontal offset from middle of printer to smooth rod center.
     #define DELTA_SMOOTH_ROD_OFFSET 186   // (mm)
     // Horizontal offset of the universal joints on the end effector.
@@ -803,15 +803,15 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-//#define X_DRIVER_TYPE  A4988
-//#define Y_DRIVER_TYPE  A4988
-//#define Z_DRIVER_TYPE  A4988
+#define X_DRIVER_TYPE  TMC2209
+#define Y_DRIVER_TYPE  TMC2209
+#define Z_DRIVER_TYPE  TMC2209
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
-//#define E0_DRIVER_TYPE A4988
+#define E0_DRIVER_TYPE TMC2209
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
@@ -1258,9 +1258,9 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR true
-#define INVERT_Y_DIR true
-#define INVERT_Z_DIR true
+#define INVERT_X_DIR false
+#define INVERT_Y_DIR false
+#define INVERT_Z_DIR false
 
 // @section extruder
 
