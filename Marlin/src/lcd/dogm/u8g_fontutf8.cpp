@@ -64,10 +64,10 @@ static const font_t* fontgroup_find(font_group_t * root, wchar_t val) {
   uxg_fontinfo_t vcmp = {(uint16_t)(val / 128), (uint8_t)(val % 128 + 128), (uint8_t)(val % 128 + 128), 0, 0};
   size_t idx = 0;
 
-  if (val < 256) return nullptr;
+  if (val < 256) return NULL;
 
   if (pf_bsearch_r((void*)root->m_fntifo, root->m_fntinfo_num, pf_bsearch_cb_comp_fntifo_pgm, (void*)&vcmp, &idx) < 0)
-    return nullptr;
+    return NULL;
 
   memcpy_P(&vcmp, root->m_fntifo + idx, sizeof(vcmp));
   return vcmp.fntdata;
@@ -114,12 +114,12 @@ static void fontgroup_drawstring(font_group_t *group, const font_t *fnt_default,
 }
 
 static bool flag_fontgroup_was_inited = false;
-static font_group_t g_fontgroup_root = { nullptr, 0 };
+static font_group_t g_fontgroup_root = {NULL, 0};
 
 /**
  * @brief check if font is loaded
  */
-static inline bool uxg_Utf8FontIsInited() { return flag_fontgroup_was_inited; }
+static inline bool uxg_Utf8FontIsInited(void) { return flag_fontgroup_was_inited; }
 
 int uxg_SetUtf8Fonts (const uxg_fontinfo_t * fntinfo, int number) {
   flag_fontgroup_was_inited = 1;
@@ -140,6 +140,7 @@ static int fontgroup_cb_draw_u8g(void *userdata, const font_t *fnt_current, cons
 
   if (pdata->fnt_prev != fnt_current) {
     u8g_SetFont(pdata->pu8g, (const u8g_fntpgm_uint8_t*)fnt_current);
+    //u8g_SetFontPosBottom(pdata->pu8g);
     pdata->fnt_prev = fnt_current;
   }
   if ((pdata->max_width != PIXEL_LEN_NOLIMIT) && (pdata->adv + u8g_GetStrPixelWidth(pdata->pu8g, (char*)msg) > pdata->max_width))
@@ -175,7 +176,7 @@ unsigned int uxg_DrawWchar(u8g_t *pu8g, unsigned int x, unsigned int y, wchar_t 
   data.y = y;
   data.adv = 0;
   data.max_width = max_width;
-  data.fnt_prev = nullptr;
+  data.fnt_prev = NULL;
   fontgroup_drawwchar(group, fnt_default, ch, (void*)&data, fontgroup_cb_draw_u8g);
   u8g_SetFont(pu8g, (const u8g_fntpgm_uint8_t*)fnt_default);
 
@@ -209,7 +210,7 @@ unsigned int uxg_DrawUtf8Str(u8g_t *pu8g, unsigned int x, unsigned int y, const 
   data.y = y;
   data.adv = 0;
   data.max_width = max_width;
-  data.fnt_prev = nullptr;
+  data.fnt_prev = NULL;
   fontgroup_drawstring(group, fnt_default, utf8_msg, read_byte_ram, (void*)&data, fontgroup_cb_draw_u8g);
   u8g_SetFont(pu8g, (const u8g_fntpgm_uint8_t*)fnt_default);
 
@@ -243,7 +244,7 @@ unsigned int uxg_DrawUtf8StrP(u8g_t *pu8g, unsigned int x, unsigned int y, PGM_P
   data.y = y;
   data.adv = 0;
   data.max_width = max_width;
-  data.fnt_prev = nullptr;
+  data.fnt_prev = NULL;
   fontgroup_drawstring(group, fnt_default, utf8_msg, read_byte_rom, (void*)&data, fontgroup_cb_draw_u8g);
   u8g_SetFont(pu8g, (const u8g_fntpgm_uint8_t*)fnt_default);
 
@@ -255,6 +256,7 @@ static int fontgroup_cb_draw_u8gstrlen(void *userdata, const font_t *fnt_current
 
   if (pdata->fnt_prev != fnt_current) {
     u8g_SetFont(pdata->pu8g, (const u8g_fntpgm_uint8_t*)fnt_current);
+    u8g_SetFontPosBottom(pdata->pu8g);
     pdata->fnt_prev = fnt_current;
   }
   pdata->adv += u8g_GetStrPixelWidth(pdata->pu8g, (char*)msg);
