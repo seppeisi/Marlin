@@ -39,34 +39,43 @@
  *                                 GND |-----#####-----| VIN (3.65 TO 5.5V)
  *  X_STEP_PIN     CS1     RX1  PWM  0 |     #####     | GND
  *  X_DIR_PIN      MISO1   TX1  PWM  1 |               | 3.3V
- *  Y_STEP_PIN                  PWM  2 |               | 23  A9 PWM              SERVO1_PIN
- *  Y_DIR_PIN                   PWM  3 |               | 22  A8 PWM              SERVO0_PIN
- *  Z_STEP_PIN                  PWM  4 |               | 21  A7      RX5
- *  Z_DIR_PIN                   PWM  5 |               | 20  A6      TX5         FILWIDTH_PIN
+ *  Y_STEP_PIN                  PWM  2 |               | 23  A9 PWM              LCD_PINS_D7  
+ *  Y_DIR_PIN                   PWM  3 |               | 22  A8 PWM              LCD_PINS_D6  
+ *  Z_STEP_PIN                  PWM  4 |               | 21  A7      RX5         LCD_PINS_D5  
+ *  Z_DIR_PIN                   PWM  5 |               | 20  A6      TX5         LCD_PINS_D4    
  *  X_ENABLE_PIN                PWM  6 |               | 19  A5 PWM        SCL0
- *  Y_ENABLE_PIN           RX2  PWM  7 |               | 18  A4 PWM        SDA0  HEATER_1_PIN
- *  Z_ENABLE_PIN           TX2  PWM  8 |               | 17  A3      RX4   SDA1
+ *  Y_ENABLE_PIN           RX2  PWM  7 |               | 18  A4 PWM        SDA0  
+ *  Z_ENABLE_PIN           TX2  PWM  8 |               | 17  A3      RX4   SDA1  
  *  E0_STEP_PIN                 PWM  9 |               | 16  A2      TX4   SCL1  TEMP_0_PIN
  *  E0_DIR_PIN                  PWM 10 |               | 15  A1 PWM  RX3         TEMP_BED_PIN
- *  MOSI_PIN       MOSI0        PWM 11 |               | 14  A0 PWM  TX3         TEMP_1_PIN
+ *  MOSI_PIN       MOSI0        PWM 11 |               | 14  A0 PWM  TX3         
  *  MISO_PIN       MISO0        PWM 12 |               | 13 LED PWM  SCK0        SCK_PIN
  *                                3.3V |               | GND
- *  Z_STOP_PIN                  PWM 24 |               | 41 A17
- *  E0_ENABLE_PIN               PWM 25 |               | 40 A16
+ *  Z_STOP_PIN                  PWM 24 |               | 41 A17                  LCD_PINS_ENABLE
+ *  E0_ENABLE_PIN               PWM 25 |               | 40 A16                  LCD_PINS_RS
  *  FAN_PIN        MOSI1            26 |               | 39 A15      MISO1       X_STOP_PIN
  *  Z-PROBE PWR    SCK1             27 | *  *  *  *  * | 38 A14                  Y_STOP_PIN
- *  SOL1_PIN               RX7  PWM 28 |               | 37     PWM              HEATER_0_PIN
+ *                         RX7  PWM 28 |               | 37     PWM              HEATER_0_PIN
  *  FAN_PIN                TX7  PWM 29 |               | 36     PWM              HEATER_BED_PIN
- *  X_CS_PIN                        30 |               | 35          TX8         E1_ENABLE_PIN
- *  y_CS_PIN                        31 |    SDCARD     | 34          RX8         E1_DIR_PIN
- *  Z_CS_PIN                        32 |_______________| 33     PWM              E1_STEP_PIN
+ *  X_CS_PIN                        30 |               | 35          TX8         BTN_EN1
+ *  y_CS_PIN                        31 |    SDCARD     | 34          RX8         BTN_EN2
+ *  Z_CS_PIN                        32 |_______________| 33     PWM              BTN_ENC
  */
 
+
 //
-// Servos
+// LCD & CONTROL PINS
 //
-#define SERVO0_PIN                            22
-#define SERVO1_PIN                            23
+#define LCD_PINS_RS                           40
+#define LCD_PINS_ENABLE                       41
+#define LCD_PINS_D4                           20
+#define LCD_PINS_D5                           21
+#define LCD_PINS_D6                           22
+#define LCD_PINS_D7                           23
+#define BTN_EN1                               35
+#define BTN_EN2                               34
+#define BTN_ENC                               33
+
 
 //
 // Limit Switches
@@ -81,31 +90,26 @@
 #define X_STEP_PIN                             0
 #define X_DIR_PIN                              1
 #define X_ENABLE_PIN                           6
-//#define X_CS_PIN                              30
+#define X_CS_PIN                              30
 
 #define Y_STEP_PIN                             2
 #define Y_DIR_PIN                              3
 #define Y_ENABLE_PIN                           7
-//#define Y_CS_PIN                              31
+#define Y_CS_PIN                              31
 
 #define Z_STEP_PIN                             4
 #define Z_DIR_PIN                              5
 #define Z_ENABLE_PIN                           8
-//#define Z_CS_PIN                              32
+#define Z_CS_PIN                              32
 
 #define E0_STEP_PIN                            9
 #define E0_DIR_PIN                            10
 #define E0_ENABLE_PIN                         25
 
-#define E1_STEP_PIN                           33
-#define E1_DIR_PIN                            34
-#define E1_ENABLE_PIN                         35
-
 //
 // Heaters / Fans
 //
 #define HEATER_0_PIN                          37
-#define HEATER_1_PIN                          18
 #define HEATER_BED_PIN                        36
 #ifndef FAN_PIN
   #define FAN_PIN                             29
@@ -115,16 +119,12 @@
 // Temperature Sensors
 //
 #define TEMP_0_PIN                             2  // Extruder / Analog pin numbering: 2 => A2
-#define TEMP_1_PIN                             0
 #define TEMP_BED_PIN                           1  // Bed / Analog pin numbering
 
 //
 // Misc. Functions
 //
 #define LED_PIN                               13
-#define SOL0_PIN                              28
-//#define PS_ON_PIN                              1
-//#define FILWIDTH_PIN                           6  // A6
 
 #ifndef SDCARD_CONNECTION
   #define SDCARD_CONNECTION              ONBOARD
