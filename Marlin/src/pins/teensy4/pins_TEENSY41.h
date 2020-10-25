@@ -96,12 +96,12 @@
 #define X_STEP_PIN                             0
 #define X_DIR_PIN                              1
 #define X_ENABLE_PIN                           6
-#define X_CS_PIN                              30
+#define X_CS_PIN                              31
 
 #define Y_STEP_PIN                             2
 #define Y_DIR_PIN                              3
 #define Y_ENABLE_PIN                           7
-#define Y_CS_PIN                              31
+//#define Y_CS_PIN                              31
 
 #define Z_STEP_PIN                             4
 #define Z_DIR_PIN                              5
@@ -132,5 +132,5 @@
 //
 
 #ifndef SDCARD_CONNECTION
-  //#define SDCARD_CONNECTION              ONBOARD
+  #define SDCARD_CONNECTION              ONBOARD
 #endif
