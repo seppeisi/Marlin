@@ -76,7 +76,6 @@
 #define BTN_EN2                               34
 #define BTN_ENC                               33
 
-
 //
 // Limit Switches
 //
@@ -90,7 +89,6 @@
 #define MOSI_PIN                              11
 #define MISO_PIN                              12
 #define SCK_PIN                               13 
-
 
 //
 // Steppers
@@ -132,7 +130,6 @@
 //
 // Misc. Functions
 //
-#define LED_PIN                               13
 
 #ifndef SDCARD_CONNECTION
   #define SDCARD_CONNECTION              ONBOARD
