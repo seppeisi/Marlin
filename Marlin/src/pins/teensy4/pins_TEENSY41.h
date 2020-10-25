@@ -85,6 +85,14 @@
 #define Z_STOP_PIN                            24
 
 //
+//HW SPI
+//
+#define MOSI_PIN                              11
+#define MISO_PIN                              12
+#define SCK_PIN                               13 
+
+
+//
 // Steppers
 //
 #define X_STEP_PIN                             0
