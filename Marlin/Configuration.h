@@ -558,7 +558,7 @@
   #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 #endif
-#define ARDUINO_TEENSY41
+
 // @section extruder
 
 /**
