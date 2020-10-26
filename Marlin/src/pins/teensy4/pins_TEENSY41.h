@@ -47,7 +47,7 @@
  *  Y_ENABLE_PIN           RX2  PWM  7 |               | 18  A4 PWM        SDA0  
  *  Z_ENABLE_PIN           TX2  PWM  8 |               | 17  A3      RX4   SDA1  
  *  E0_STEP_PIN                 PWM  9 |               | 16  A2      TX4   SCL1  TEMP_0_PIN
- *  E0_DIR_PIN                  PWM 10 |               | 15  A1 PWM  RX3         TEMP_BED_PIN
+ *  E0_DIR_PIN                  PWM 10 |               | 15  A1 PWM  RX3         
  *  MOSI_PIN       MOSI0        PWM 11 |               | 14  A0 PWM  TX3         
  *  MISO_PIN       MISO0        PWM 12 |               | 13 LED PWM  SCK0        SCK_PIN
  *                                3.3V |               | GND
@@ -100,7 +100,9 @@
 #define X_STEP_PIN                             0
 #define X_DIR_PIN                              1
 #define X_ENABLE_PIN                           6
-#define X_CS_PIN                              30
+//#define X_CS_PIN                              30
+#define X_HARDWARE_SERIAL                     Serial3
+
 
 #define Y_STEP_PIN                             2
 #define Y_DIR_PIN                              3
@@ -129,7 +131,7 @@
 // Temperature Sensors
 //
 #define TEMP_0_PIN                             2  // Extruder / Analog pin numbering: 2 => A2
-#define TEMP_BED_PIN                           1  // Bed / Analog pin numbering
+#define TEMP_BED_PIN                           18  // Bed / Analog pin numbering
 
 //
 // Misc. Functions
