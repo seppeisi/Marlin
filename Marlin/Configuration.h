@@ -128,7 +128,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_TEENSY41
+  #define MOTHERBOARD BOARD_TEENSY35_36
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
