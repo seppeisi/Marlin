@@ -86,13 +86,10 @@
 //
 //HW SPI
 //
+
 #define MOSI_PIN                              11
 #define MISO_PIN                              12
 #define SCK_PIN                               13 
-
-#define TMC_SW_MOSI                             11
-#define TMC_SW_MISO                             12
-#define TMC_SW_SCK                              13
 
 //
 // Steppers
