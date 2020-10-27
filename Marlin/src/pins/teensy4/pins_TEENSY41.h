@@ -90,9 +90,9 @@
 #define MISO_PIN                              12
 #define SCK_PIN                               13 
 
-//#define TMC_SW_MOSI                             11
-//#define TMC_SW_MISO                             12
-//#define TMC_SW_SCK                              13
+#define TMC_SW_MOSI                             11
+#define TMC_SW_MISO                             12
+#define TMC_SW_SCK                              13
 
 //
 // Steppers
@@ -100,8 +100,8 @@
 #define X_STEP_PIN                             0
 #define X_DIR_PIN                              1
 #define X_ENABLE_PIN                           6
-//#define X_CS_PIN                              30
-#define X_HARDWARE_SERIAL                     Serial3
+#define X_CS_PIN                              30
+//#define X_HARDWARE_SERIAL                     Serial3
 
 
 #define Y_STEP_PIN                             2
