@@ -40,7 +40,15 @@
 //
 #define X_STOP_PIN                             3
 #define Y_STOP_PIN                             4
-#define Z_STOP_PIN                             5
+#define Z_STOP_PIN                             17
+
+//
+// HW SPI
+//
+#define MOSI_PIN                              11
+#define MISO_PIN                              12
+#define SCK_PIN                               13
+#define X_CS_PIN                              10
 
 //
 // Steppers
@@ -54,12 +62,12 @@
 #define Y_ENABLE_PIN                           2
 
 #define Z_STEP_PIN                             9
-#define Z_DIR_PIN                             10
+#define Z_DIR_PIN                             16
 #define Z_ENABLE_PIN                           2
 
-//#define E0_STEP_PIN                           11
-//#define E0_DIR_PIN                            12
-//#define E0_ENABLE_PIN                          2
+#define E0_STEP_PIN                            0
+#define E0_DIR_PIN                             1
+#define E0_ENABLE_PIN                          2
 
 //#define E1_STEP_PIN                         33
 //#define E1_DIR_PIN                          34
@@ -71,9 +79,7 @@
 #define HEATER_0_PIN                          20
 //#define HEATER_1_PIN                        36
 #define HEATER_BED_PIN                        21
-#ifndef FAN_PIN
-  #define FAN_PIN                             22
-#endif
+
 
 //
 // Temperature Sensors
@@ -82,14 +88,11 @@
 //#define TEMP_1_PIN                           0  // Analog Input
 #define TEMP_BED_PIN                          15  // Analog Input - Bed
 
-#ifndef FILWIDTH_PIN
-  #define FILWIDTH_PIN                         6  // Analog Input
-#endif
 
 //
 // Misc. Functions
 //
-#define LED_PIN                               13
+//#define LED_PIN                               13
 //#define SOL1_PIN                            28
 //#define SDSS                                16  // 8
 
