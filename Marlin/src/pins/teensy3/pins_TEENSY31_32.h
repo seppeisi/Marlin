@@ -57,9 +57,9 @@
 #define Z_DIR_PIN                             10
 #define Z_ENABLE_PIN                           2
 
-#define E0_STEP_PIN                           11
-#define E0_DIR_PIN                            12
-#define E0_ENABLE_PIN                          2
+//#define E0_STEP_PIN                           11
+//#define E0_DIR_PIN                            12
+//#define E0_ENABLE_PIN                          2
 
 //#define E1_STEP_PIN                         33
 //#define E1_DIR_PIN                          34
