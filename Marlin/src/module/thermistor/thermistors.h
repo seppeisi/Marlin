@@ -75,6 +75,9 @@ typedef struct { int16_t value, celsius; } temp_entry_t;
 #if ANY_THERMISTOR_IS(502) // Unknown thermistor used by the Zonestar Průša P802M hot bed
   #include "thermistor_502.h"
 #endif
+#if ANY_THERMISTOR_IS(503) // Zonestar (Z8XM2) Heated Bed thermistor
+  #include "thermistor_503.h"
+#endif
 #if ANY_THERMISTOR_IS(512) // 100k thermistor in RPW-Ultra hotend, Pull-up = 4.7 kOhm, "unknown model"
   #include "thermistor_512.h"
 #endif
@@ -104,6 +107,9 @@ typedef struct { int16_t value, celsius; } temp_entry_t;
 #endif
 #if ANY_THERMISTOR_IS(15) // JGAurora A5 thermistor calibration
   #include "thermistor_15.h"
+#endif
+#if ANY_THERMISTOR_IS(17) // Dagoma NTC 100k white thermistor
+  #include "thermistor_17.h"
 #endif
 #if ANY_THERMISTOR_IS(18) // ATC Semitec 204GT-2 (4.7k pullup) Dagoma.Fr - MKS_Base_DKU001327
   #include "thermistor_18.h"
