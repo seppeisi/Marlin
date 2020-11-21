@@ -104,8 +104,8 @@ void StatusScreen::draw_axis_position(draw_mode_t what) {
     cmd.tag(6)
        .font(Theme::font_medium)
        .text  ( X_VAL_POS, x_str)
-       .text  ( Y_VAL_POS, y_str)
-       .text  ( Z_VAL_POS, z_str);
+       //.text  ( Y_VAL_POS, y_str)
+       //.text  ( Z_VAL_POS, z_str);
   }
 
   #undef GRID_COLS
