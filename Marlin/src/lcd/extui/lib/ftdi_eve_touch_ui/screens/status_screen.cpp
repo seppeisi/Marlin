@@ -75,8 +75,8 @@ void StatusScreen::draw_axis_position(draw_mode_t what) {
        .fgcolor(Theme::z_axis) .button( Z_VAL_POS, F(""), OPT_FLAT)
        .font(Theme::font_small)
                                .text  ( X_LBL_POS, GET_TEXT_F(MSG_AXIS_X))
-                               //.text  ( Y_LBL_POS, GET_TEXT_F(MSG_AXIS_Y))
-                               //.text  ( Z_LBL_POS, GET_TEXT_F(MSG_AXIS_Z))
+                               .text  ( Y_LBL_POS, GET_TEXT_F(MSG_AXIS_Y))
+                               .text  ( Z_LBL_POS, GET_TEXT_F(MSG_AXIS_Z))
        .colors(normal_btn);
   }
 
@@ -104,8 +104,8 @@ void StatusScreen::draw_axis_position(draw_mode_t what) {
     cmd.tag(6)
        .font(Theme::font_medium)
        .text  ( X_VAL_POS, x_str)
-       //.text  ( Y_VAL_POS, y_str)
-       //.text  ( Z_VAL_POS, z_str);
+       .text  ( Y_VAL_POS, y_str)
+       .text  ( Z_VAL_POS, z_str);
   }
 
   #undef GRID_COLS
