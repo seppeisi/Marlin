@@ -1138,7 +1138,7 @@
  *     O-- FRONT --+
  */
 #if ANYCUBIC_PROBE_VERSION == 2
-  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -16.4 }
+  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -16.8 }
 #elif ANYCUBIC_PROBE_VERSION == 1
   #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -19.0 }
 #else
