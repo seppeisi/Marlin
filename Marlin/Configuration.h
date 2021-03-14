@@ -958,7 +958,7 @@
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
 #if ANYCUBIC_PROBE_VERSION > 0
-  #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+  //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 #endif
 
 // Force the use of the probe for Z-axis homing
