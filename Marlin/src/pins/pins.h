@@ -630,15 +630,17 @@
 //
 
 #elif MB(REMRAM_V1)
-  #include "stm32f7/pins_REMRAM_V1.h"           // STM32F7                                env:REMRAM_V1
+  #include "stm32f7/pins_REMRAM_V1.h"             // STM32F7                                env:REMRAM_V1
 #elif MB(NUCLEO_F767ZI)
-  #include "stm32f7/pins_NUCLEO_F767ZI.h"       // STM32F7                                env:NUCLEO_F767ZI
+  #include "stm32f7/pins_NUCLEO_F767ZI.h"         // STM32F7                                env:NUCLEO_F767ZI
 #elif MB(BTT_SKR_SE_BX)
-  #include "stm32h7/pins_BTT_SKR_SE_BX.h"       // STM32H7                                env:BTT_SKR_SE_BX
+  #include "stm32h7/pins_BTT_SKR_SE_BX.h"         // STM32H7                                env:BTT_SKR_SE_BX
 #elif MB(TEENSY41)
-  #include "teensy4/pins_TEENSY41.h"            // Teensy-4.x                             env:teensy41
+  #include "teensy4/pins_TEENSY41.h"              // Teensy-4.x                             env:teensy41
 #elif MB(T41U5XBB)
-  #include "teensy4/pins_T41U5XBB.h"            // Teensy-4.x                             env:teensy41
+  #include "teensy4/pins_T41U5XBB.h"              // Teensy-4.x                             env:teensy41
+#elif MB(TEENSY41_DEV_BOARD_JE)
+  #include "teensy4/pins_TEENSY41_DEV_BOARD_JE.h" // Teensy-4.x                           env:teensy41
 
 //
 // Espressif ESP32
