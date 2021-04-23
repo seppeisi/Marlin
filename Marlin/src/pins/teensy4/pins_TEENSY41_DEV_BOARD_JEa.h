@@ -37,14 +37,14 @@
  * Plan for Teensy41_DEV_Board_JE:
  *                                            USB
  *                                 GND |-----#####-----| VIN (3.65 TO 5.5V)
- *  SERIAL1 RX     CS1     RX1  PWM  0 |     #####     | GND
- *  Serial1 TX     MISO1   TX1  PWM  1 |               | 3.3V
+ *  X_ENABLE       CS1     RX1  PWM  0 |     #####     | GND
+ *  X_DIR          MISO1   TX1  PWM  1 |               | 3.3V
  *  Y_STEP_PIN                  PWM  2 |               | 23  A9 PWM              LCD_PINS_D7  
  *  Y_DIR_PIN                   PWM  3 |               | 22  A8 PWM              LCD_PINS_D6  
  *  Z_STEP_PIN                  PWM  4 |               | 21  A7      RX5         LCD_PINS_D5  
  *  Z_DIR_PIN                   PWM  5 |               | 20  A6      TX5         LCD_PINS_D4    
- *  X_STEP_PIN                  PWM  6 |               | 19  A5 PWM        SCL0  X_ENABLE_PIN
- *  Y_ENABLE_PIN           RX2  PWM  7 |               | 18  A4 PWM        SDA0  X_DIR_PIN
+ *  X_STEP_PIN                  PWM  6 |               | 19  A5 PWM        SCL0  SCL0
+ *  Y_ENABLE_PIN           RX2  PWM  7 |               | 18  A4 PWM        SDA0  SDA0
  *  Z_ENABLE_PIN           TX2  PWM  8 |               | 17  A3      RX4   SDA1  TEMP_BED
  *  E0_STEP_PIN                 PWM  9 |               | 16  A2      TX4   SCL1  TEMP_0_PIN
  *  E0_DIR_PIN                  PWM 10 |               | 15  A1 PWM  RX3         BEEPER
@@ -105,30 +105,30 @@
 //
 //HW Serial
 //
-#define X_HARDWARE_SERIAL  Serial1              //Pins 0 und 1
-#define Y_HARDWARE_SERIAL  Serial1
+//#define X_HARDWARE_SERIAL  Serial1              //Pins 0 und 1
+//#define Y_HARDWARE_SERIAL  Serial1
 //
 // Steppers
 //
 #define X_STEP_PIN                             6
-#define X_DIR_PIN                              18 //Für 20-01.1a1 Pin: 1
-#define X_ENABLE_PIN                           19 //Für 20-01.1a1 Pin: 0
-//#define X_CS_PIN                              30
+#define X_DIR_PIN                              1 //Für 20-01.1a1 Pin: 1
+#define X_ENABLE_PIN                           0 //Für 20-01.1a1 Pin: 0
+#define X_CS_PIN                              30
 
 #define Y_STEP_PIN                             2
 #define Y_DIR_PIN                              3
 #define Y_ENABLE_PIN                           7
-//#define Y_CS_PIN                              31
+#define Y_CS_PIN                              31
 
 #define Z_STEP_PIN                             4
 #define Z_DIR_PIN                              5
 #define Z_ENABLE_PIN                           8
-//#define Z_CS_PIN                              32
+#define Z_CS_PIN                              32
 
 #define E0_STEP_PIN                            9
 #define E0_DIR_PIN                            10
 #define E0_ENABLE_PIN                         25
-//#define E0_CS_PIN                             29
+#define E0_CS_PIN                             29
 
 //
 // Heaters / Fans
