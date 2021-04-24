@@ -565,9 +565,9 @@
     #define DEFAULT_bedKd 482.59
   #elif ANYCUBIC_KOSSEL_ENABLE_BED == 2
     // TODO get real PID values for Ultrabase Bed
-    #define DEFAULT_bedKp 260.03
-    #define DEFAULT_bedKi 44.47
-    #define DEFAULT_bedKd 1000.00
+    #define DEFAULT_bedKp 255.63
+    #define DEFAULT_bedKi 35.79
+    #define DEFAULT_bedKd 1217.13
   #endif
 
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
