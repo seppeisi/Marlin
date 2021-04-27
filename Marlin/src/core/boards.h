@@ -364,6 +364,8 @@
 #define BOARD_TEENSY41                5002  // Teensy 4.1
 #define BOARD_T41U5XBB                5003  // T41U5XBB Teensy 4.1 breakout board
 #define BOARD_NUCLEO_F767ZI           5004  // ST NUCLEO-F767ZI Dev Board
+#define BOARD_TEENSY41_DEVBOARD_a     5100  // TEENSY4.1 DEV BOARD REV-A
+#define BOARD_TEENSY41_DEVBOARD_b     5101  // TEENSY4.1 DEV BOARD REV-B
 
 //
 // Espressif ESP32 WiFi

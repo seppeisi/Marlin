@@ -640,6 +640,10 @@
   #include "teensy4/pins_TEENSY41.h"            // Teensy-4.x                             env:teensy41
 #elif MB(T41U5XBB)
   #include "teensy4/pins_T41U5XBB.h"            // Teensy-4.x                             env:teensy41
+#elif MB(TEENSY41_DEVBOARD_a)
+  #include "teensy4/pins_TEENSY41_DEV_BOARD_JEa.h"            // Teensy-4.x                             env:teensy41
+#elif MB(TEENSY41_DEVBOARD_b)
+  #include "teensy4/pins_TEENSY41_DEV_BOARD_JEb.h"            // Teensy-4.x                             env:teensy41
 
 //
 // Espressif ESP32
