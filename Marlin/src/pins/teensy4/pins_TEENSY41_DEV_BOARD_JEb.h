@@ -105,8 +105,10 @@
 //
 //HW Serial
 //
-#define X_HARDWARE_SERIAL  Serial1              //Pins 0 und 1
-//#define Y_HARDWARE_SERIAL  Serial1
+#define X_HARDWARE_SERIAL   Serial1              //Pins 0 und 1
+#define Y_HARDWARE_SERIAL   Serial1
+#define Z_HARDWARE_SERIAL   Serial1
+#define E0_HARDWARE_SERIAL  Serial1
 //
 // Steppers
 //
