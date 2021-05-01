@@ -106,7 +106,9 @@
 //HW Serial
 //
 #define X_HARDWARE_SERIAL  Serial1              //Pins 0 und 1
-//#define Y_HARDWARE_SERIAL  Serial1
+#define Y_HARDWARE_SERIAL  Serial1
+#define Z_HARDWARE_SERIAL  Serial1
+#define E0_HARDWARE_SERIAL  Serial1
 //
 // Steppers
 //
@@ -143,8 +145,8 @@
 //
 // Temperature Sensors
 //
-#define TEMP_0_PIN                             16  // Extruder / Analog pin numbering: 2 => A2
-#define TEMP_BED_PIN                           17  // Bed / Analog pin numbering
+#define TEMP_0_PIN                             2  // Extruder / Analog pin numbering: 2 => A2
+#define TEMP_BED_PIN                           3  // Bed / Analog pin numbering
 
 //
 // Misc. Functions
