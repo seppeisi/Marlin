@@ -143,8 +143,8 @@
 //
 // Temperature Sensors
 //
-#define TEMP_0_PIN                             16  // Extruder / Analog pin numbering: 2 => A2
-#define TEMP_BED_PIN                           17  // Bed / Analog pin numbering
+#define TEMP_0_PIN                             2  // Extruder / Analog pin numbering: 2 => A2
+#define TEMP_BED_PIN                           3  // Bed / Analog pin numbering
 
 //
 // Misc. Functions
